@@ -1,17 +1,10 @@
 # Wordfinder challenge
 The current project resolves a takehome challenge where is requested the implementation of a class called "Wordfinder"
 
-## Specifications
-- The class constructor should recieve a `IEnumerable<string>` (to be used as the matrix where the words should be searched).
-- The class should have implemented the method `Find(IEnumerable<string> wordstream)`. `wordstream` parameter is the collection of words to search inside the matrix.
-- The words must be count when appear horizontally (from left to right) or vertically (from top to bottom).
-- The "Find" method should return the top 10 most repeated words from the word stream found in the matrix.
-- If no words are found, the "Find" method should return an empty set of strings.
-- If any word in the word stream is found more than once within the stream, the search results should count it only once.
-
-## Challenge considerations (according with the provided PDF)
-- The given matrix size does not exceed 64x64.
-- All strings in the matrix contain the same number of characters.
+## Instructions
+1. Clone repository
+2. Open project
+3. Run tests (dotnet test)
 
 ## How I resolved it
 ### Tech stack
@@ -37,7 +30,14 @@ The current project resolves a takehome challenge where is requested the impleme
 - I'm not throwing an exception when matrix size is greater than 64x64 because is not a requirement and this way can support 2GB of matrix size (near to 32000x32000 matrix size).
 - Probably this project could be improved using a complex search algorithm. I did not found necessary if we consider the input matrix max size is 64x64.
 
-## Instructions
-1- Clone repository
-2- Open project
-3- Run tests (dotnet test)
+## Challenge specifications
+- The class constructor should recieve a `IEnumerable<string>` (to be used as the matrix where the words should be searched).
+- The class should have implemented the method `Find(IEnumerable<string> wordstream)`. `wordstream` parameter is the collection of words to search inside the matrix.
+- The words must be count when appear horizontally (from left to right) or vertically (from top to bottom).
+- The "Find" method should return the top 10 most repeated words from the word stream found in the matrix.
+- If no words are found, the "Find" method should return an empty set of strings.
+- If any word in the word stream is found more than once within the stream, the search results should count it only once.
+
+## Challenge considerations (according with the provided PDF)
+- The given matrix size does not exceed 64x64.
+- All strings in the matrix contain the same number of characters.
